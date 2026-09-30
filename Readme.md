@@ -1,10 +1,14 @@
-# Practicas de la asignaura Optativa I: Base de datos en la nube
-## Ing. en >Tecnologias de la informacion e innovacion digital
-## Alumno: Carlos Alberto Cabrera Solis
-periodo Septiembre - Diciembre 2026
+# Prácticas de la Asignatura de Base de Datos en la Nube
+## Ingeniería en Tecnologías de la Información e Innovación Digital
+#### Docente: M.T.I.  Marco A. Ramírez Hernández
 
----
+Periodo: Septiembre - Diciembre 2026
 
-|ID|Numero de practica|Nombre de la practica|Potenciador|Estatus|
+--- 
+
+###  Tabla de Prácticas de la Materia
+
+|No.| Nombre | Descripción | Potenciador | Estatus |
 |---|---|---|---|---|
-|1|Practica 02|Conexcion remota en MYSQL|42|En desarrollo|
+|1.|Metodología de Evaluación de la Materia| Transcribir en libreta y comprender la metodología y fechas de evaluación de la asignatura| 5| 🟢 Conlcuida |
+|2.|Conexiones Remotas para Bases de Datos SQL|Crear y Administrar usuario y privelegios de origenes remotos a traves de internet o una red local| ??| 🟡 En Progreso |
