@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `db_test_7a` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `db_test_7a`;
+CREATE DATABASE  IF NOT EXISTS `db_test` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `db_test`;
 -- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
 --
--- Host: localhost    Database: db_test_7a
+-- Host: localhost    Database: db_test
 -- ------------------------------------------------------
 -- Server version	8.0.45
 
@@ -42,7 +42,8 @@ CREATE TABLE `tb_logs` (
 
 LOCK TABLES `tb_logs` WRITE;
 /*!40000 ALTER TABLE `tb_logs` DISABLE KEYS */;
-INSERT INTO `tb_logs` VALUES (1,'tb_users','Create','root@localhost','2026-09-10 09:58:11','Usuario creado. ID=3, email=marco.ramirez@utxicotepec.edu.mx, nick=MTI-MarcoRH, creation_date=2026-09-10 09:58:11, status=',_binary ''),(2,'tb_users','Create','root@localhost','2026-09-10 10:23:08','Usuario creado. ID=4, email=alejandra99@gmail.com, nick=Alex, creation_date=2026-09-10 10:23:08, status=',_binary ''),(3,'tb_users','Create','root@localhost','2026-09-10 10:23:39','Usuario creado. ID=5, email=fercho@hotmail.com, nick=FernandoxD, creation_date=2026-09-10 10:23:39, status=',_binary ''),(4,'tb_users','Create','vanessa.vergara@PC-02','2026-09-10 11:26:03','Usuario creado. ID=6, email=240270@utxicotepec.edu.mx, nick=Vanessa Vergara, creation_date=2026-09-10 11:26:03, status=',_binary ''),(5,'tb_users','Create','vanessa.vergara@PC-02','2026-09-10 11:27:08','Usuario creado. ID=7, email=240383@utxicotepec.edu.mx, nick=Samuel Ramírez, creation_date=2026-09-10 11:27:08, status=',_binary ''),(6,'tb_users','Create','vanessa.vergara@PC-02','2026-09-10 11:28:09','Usuario creado. ID=8, email=240780@utxicotepec.edu.mx, nick=Sarahi Torres, creation_date=2026-09-10 11:28:09, status=',_binary ''),(7,'tb_users','Delete','vanessa.vergara@PC-02','2026-09-10 12:41:39','Usuario eliminado. ID=8, email=240780@utxicotepec.edu.mx, nick=Sarahi Torres, creation_date=2026-09-10 11:28:09, last_update=NULL, last_login=NULL, status=1',_binary ''),(8,'tb_users','Update','vanessa.vergara@PC-02','2026-09-10 12:42:25','Usuario actualizado. ID=7. Cambios: nick: Samuel Ramírez -> Sam, last_update: NULL -> 2026-09-10 12:42:25',_binary '');
+INSERT INTO `tb_logs` VALUES
+(1,'tb_users','Create','root@localhost','2026-09-10 09:58:11','Usuario creado. ID=3, email=240201@utxicotepec.edu.mx, nick=Carlos Alberto, creation_date=2026-09-10 09:58:11, status=',_binary '');
 /*!40000 ALTER TABLE `tb_logs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -72,9 +73,25 @@ CREATE TABLE `tb_users` (
 -- Dumping data for table `tb_users`
 --
 
+
+CREATE TABLE tb_products (
+    id_products INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    SKU VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR(250) NOT NULL,
+    description TEXT NULL,
+    current_price DECIMAL(10,2) NOT NULL,
+    current_stock INT UNSIGNED NOT NULL,
+    status BIT(1) NULL,
+    creation_date DATETIME NOT NULL,
+    last_update DATETIME NOT NULL,
+    PRIMARY KEY (id_products)
+) ENGINE=InnoDB;
+
+
 LOCK TABLES `tb_users` WRITE;
 /*!40000 ALTER TABLE `tb_users` DISABLE KEYS */;
-INSERT INTO `tb_users` VALUES (3,'marco.ramirez@utxicotepec.edu.mx','MTI-MarcoRH','871534c2971fceb021437786bc940bd2','2026-09-10 09:58:11',NULL,NULL,_binary ''),(4,'alejandra99@gmail.com','Alex','827ccb0eea8a706c4c34a16891f84e7b','2026-09-10 10:23:08',NULL,NULL,_binary ''),(5,'fercho@hotmail.com','FernandoxD','d8578edf8458ce06fbc5bb76a58c5ca4','2026-09-10 10:23:39',NULL,NULL,_binary ''),(6,'240270@utxicotepec.edu.mx','Vanessa Vergara','827ccb0eea8a706c4c34a16891f84e7b','2026-09-10 11:26:03',NULL,NULL,_binary ''),(7,'240383@utxicotepec.edu.mx','Sam','827ccb0eea8a706c4c34a16891f84e7b','2026-09-10 11:27:08','2026-09-10 12:42:25',NULL,_binary '');
+INSERT INTO `tb_users` VALUES (3,'240201@utxicotepec.edu.mx','Carlos Alberto','827ccb0eea8a706c4c34a16891f84e7b','2026-09-10 09:58:11',NULL,NULL,_binary '');
+
 /*!40000 ALTER TABLE `tb_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
